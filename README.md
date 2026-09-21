@@ -4,23 +4,13 @@ Send transactional email through [Noria Mail](https://github.com/norialabs/mail)
 wiring SES into every product. Registers a Laravel mail transport, so `Mail::send()` keeps
 working exactly as it does today.
 
-The package is published as a read-only split of this monorepo at
-[`norialabs/mail-php`](https://github.com/norialabs/mail-php). Point composer at it once
-per project:
-
-```jsonc
-// composer.json
-"repositories": [
-    { "type": "vcs", "url": "git@github.com:norialabs/mail-php.git" }
-]
-```
-
 ```bash
 composer require norialabs/mail
 ```
 
-Open pull requests against [`norialabs/mail`](https://github.com/norialabs/mail); the
-mirror is force-pushed on every release and anything committed there is lost.
+This repository is a read-only split of `sdks/php` in
+[`norialabs/mail`](https://github.com/norialabs/mail). Open pull requests there; the mirror
+is force-pushed on every release and anything committed here is lost.
 
 ```env
 MAIL_MAILER=noria
