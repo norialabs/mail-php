@@ -6,7 +6,7 @@ use NoriaLabs\Mail\MailTransport;
 
 beforeEach(function () {
     $key = getenv('NORIA_MAIL_LIVE_KEY');
-    $url = getenv('NORIA_MAIL_LIVE_URL') ?: 'http://localhost:3000';
+    $url = getenv('NORIA_MAIL_LIVE_URL') ?: 'http://localhost:4800';
 
     if ($key === false || $key === '') {
         test()->markTestSkipped('Set NORIA_MAIL_LIVE_KEY to run against a running Noria Mail instance.');

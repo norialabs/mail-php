@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'url' => env('NORIA_MAIL_URL', 'http://localhost:3000'),
+    'url' => env('NORIA_MAIL_URL', 'http://localhost:4800'),
 
     'key' => env('NORIA_MAIL_KEY', ''),
 

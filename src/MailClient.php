@@ -12,7 +12,7 @@ class MailClient
     public function __construct(
         protected readonly Factory $http,
         protected readonly string $apiKey,
-        protected readonly string $baseUrl = 'http://localhost:3000',
+        protected readonly string $baseUrl = 'http://localhost:4800',
         protected readonly int $timeout = 15,
         protected readonly int $retries = 2,
     ) {

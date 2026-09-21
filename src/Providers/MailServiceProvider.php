@@ -48,7 +48,7 @@ class MailServiceProvider extends ServiceProvider implements DeferrableProvider
                 ? new MailClient(
                     $this->app->make(Factory::class),
                     $config['key'],
-                    is_string($config['url'] ?? null) ? $config['url'] : 'http://localhost:3000',
+                    is_string($config['url'] ?? null) ? $config['url'] : 'http://localhost:4800',
                 )
                 : $this->app->make(MailClient::class);
 
