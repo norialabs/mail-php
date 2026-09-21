@@ -90,6 +90,12 @@ Route::post('/webhooks/mail', function (Request $request, WebhookVerifier $verif
 
 Set `NORIA_MAIL_WEBHOOK_SECRET` to the secret shown once when the endpoint was created.
 
+## Requirements
+
+PHP 8.3 or newer, and Laravel 11, 12 or 13. PHP 8.2 is not supported: its security window
+closes on 31 December 2026 and Laravel 13 already requires 8.3, so an 8.2 application could
+never run the current framework anyway. `^8.3` admits 8.6 when it arrives.
+
 ## Tests
 
 ```bash

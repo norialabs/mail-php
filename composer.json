@@ -2,7 +2,14 @@
     "name": "norialabs/mail",
     "description": "Laravel SDK and mail transport for Noria Mail: send transactional email through one internal service instead of wiring SES into every product.",
     "type": "library",
-    "keywords": ["laravel", "mail", "email", "transactional", "ses", "noria"],
+    "keywords": [
+        "laravel",
+        "mail",
+        "email",
+        "transactional",
+        "ses",
+        "noria"
+    ],
     "license": "MIT",
     "homepage": "https://github.com/norialabs/mail",
     "support": {
@@ -17,7 +24,7 @@
         }
     ],
     "require": {
-        "php": "^8.2",
+        "php": "^8.3",
         "illuminate/http": "^11.0|^12.0|^13.0",
         "illuminate/mail": "^11.0|^12.0|^13.0",
         "illuminate/support": "^11.0|^12.0|^13.0",
@@ -43,13 +50,19 @@
         "analyse": "phpstan analyse --no-progress",
         "format": "pint",
         "format:test": "pint --test",
-        "quality": ["@format:test", "@analyse", "@test:coverage"],
+        "quality": [
+            "@format:test",
+            "@analyse",
+            "@test:coverage"
+        ],
         "test": "pest",
         "test:coverage": "pest --coverage"
     },
     "extra": {
         "laravel": {
-            "providers": ["NoriaLabs\\Mail\\Providers\\MailServiceProvider"],
+            "providers": [
+                "NoriaLabs\\Mail\\Providers\\MailServiceProvider"
+            ],
             "aliases": {
                 "NoriaMail": "NoriaLabs\\Mail\\Facades\\NoriaMail"
             }
