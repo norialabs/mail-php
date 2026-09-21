@@ -1,0 +1,66 @@
+{
+    "name": "norialabs/mail",
+    "description": "Laravel SDK and mail transport for Noria Mail: send transactional email through one internal service instead of wiring SES into every product.",
+    "type": "library",
+    "keywords": ["laravel", "mail", "email", "transactional", "ses", "noria"],
+    "license": "MIT",
+    "homepage": "https://github.com/norialabs/mail",
+    "support": {
+        "issues": "https://github.com/norialabs/mail/issues",
+        "source": "https://github.com/norialabs/mail"
+    },
+    "authors": [
+        {
+            "name": "Joseph Gitonga",
+            "email": "thekiharani@gmail.com",
+            "homepage": "https://github.com/thekiharani"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/mail": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "symfony/mailer": "^7.0|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^3.0",
+        "larastan/larastan": "^3.9",
+        "laravel/pint": "^1.29"
+    },
+    "autoload": {
+        "psr-4": {
+            "NoriaLabs\\Mail\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NoriaLabs\\Mail\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "analyse": "phpstan analyse --no-progress",
+        "format": "pint",
+        "format:test": "pint --test",
+        "quality": ["@format:test", "@analyse", "@test:coverage"],
+        "test": "pest",
+        "test:coverage": "pest --coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["NoriaLabs\\Mail\\Providers\\MailServiceProvider"],
+            "aliases": {
+                "NoriaMail": "NoriaLabs\\Mail\\Facades\\NoriaMail"
+            }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
